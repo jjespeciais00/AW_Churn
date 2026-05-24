@@ -1,0 +1,39 @@
+table currency
+	lineageTag: 7d273a16-a26e-4d86-baa7-e7fb42269837
+	sourceLineageTag: [dbo].[currency]
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b7342256-3714-49d2-9854-01fc6abba5a5
+		sourceLineageTag: CurrencyKey
+		summarizeBy: none
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: bc3af90f-ada4-4c5c-92a3-0340653d2987
+		sourceLineageTag: CurrencyCode
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyName
+		dataType: string
+		lineageTag: b8c67ffc-d43f-47c3-8175-ee2628e11314
+		sourceLineageTag: CurrencyName
+		summarizeBy: none
+		sourceColumn: CurrencyName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition currency = entity
+		mode: directLake
+		source
+			entityName: currency
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

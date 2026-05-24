@@ -1,0 +1,132 @@
+table product
+	lineageTag: 92b0870c-d00f-4662-8d0b-a2cc564035da
+	sourceLineageTag: [dbo].[product]
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ca27c639-6ef2-41f0-bae7-33298070fbce
+		sourceLineageTag: ProductKey
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		lineageTag: d0ced010-fa7c-43d8-ba54-b076ac323f28
+		sourceLineageTag: ProductCode
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		lineageTag: 0cf05896-a670-4440-b1cc-aac8e07e5551
+		sourceLineageTag: ProductSubcategoryKey
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductName
+		dataType: string
+		lineageTag: 6a54f209-ee75-486f-ac77-dca57ea9de0e
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 53ea9f57-4988-4528-a97e-8a867ffc9580
+		sourceLineageTag: StandardCost
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column ListPrice
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6e251e17-f6c3-4bfc-a72c-edbac1101043
+		sourceLineageTag: ListPrice
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column SafetyStockLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 88560e63-4e93-4719-b93b-8d492572c448
+		sourceLineageTag: SafetyStockLevel
+		summarizeBy: sum
+		sourceColumn: SafetyStockLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReorderPoint
+		dataType: int64
+		formatString: 0
+		lineageTag: 272322f9-5edc-4395-9616-3da2b7bfab42
+		sourceLineageTag: ReorderPoint
+		summarizeBy: sum
+		sourceColumn: ReorderPoint
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		lineageTag: c52e1de2-eea4-4137-9e33-8c739b12ae35
+		sourceLineageTag: Size
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		lineageTag: 698d2d2d-4460-45d9-be4a-fd8000c2046f
+		sourceLineageTag: Weight
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductLine
+		dataType: string
+		lineageTag: e95a7f33-2333-4f16-8526-dd64e151977b
+		sourceLineageTag: ProductLine
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: cb0085bf-ae11-4784-b8cf-24882597aeb3
+		sourceLineageTag: Status
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition product = entity
+		mode: directLake
+		source
+			entityName: product
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

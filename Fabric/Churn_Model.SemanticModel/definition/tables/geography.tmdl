@@ -1,0 +1,67 @@
+table geography
+	lineageTag: 990aa041-3ae2-4c8d-8104-fb1e581a17a4
+	sourceLineageTag: [dbo].[geography]
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a33a0c9-0ea9-4ebc-a812-7bba40a7a55b
+		sourceLineageTag: GeographyKey
+		summarizeBy: count
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 89ec4fa2-1faa-4e3e-acb0-aecb8f5d7ece
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceName
+		dataType: string
+		lineageTag: 617cf711-270a-424a-a936-6956592f9ba5
+		sourceLineageTag: StateProvinceName
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: fd348e5c-d472-4026-a5ce-54491bfd94b6
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: f3215877-6913-4fb4-97f2-e8ff0fecb249
+		sourceLineageTag: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 57cce870-79d4-4cd0-8753-9dd3f4cd0186
+		sourceLineageTag: SalesTerritoryKey
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition geography = entity
+		mode: directLake
+		source
+			entityName: geography
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

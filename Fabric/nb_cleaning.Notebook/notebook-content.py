@@ -304,3 +304,65 @@ for table in [
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
+
+# MARKDOWN ********************
+
+# ## corrigir productsubcategorykey pra long(int64)
+
+# CELL ********************
+
+from pyspark.sql import functions as F
+
+bronze_base = "abfss://AW_Churn_Dev@onelake.dfs.fabric.microsoft.com/lh_Bronze.Lakehouse/Tables/dbo"
+silver_base = "abfss://AW_Churn_Dev@onelake.dfs.fabric.microsoft.com/lh_Silver.Lakehouse/Tables/dbo"
+
+product = (
+    spark.read.format("delta")
+    .load(f"{silver_base}/product")
+    .withColumn(
+        "ProductSubcategoryKey",
+        F.col("ProductSubcategoryKey").cast("long")
+    )
+)
+
+(
+    product.write
+    .mode("overwrite")
+    .option("overwriteSchema","true")
+    .format("delta")
+    .save(f"{silver_base}/product")
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+#validar
+spark.read.format("delta")\
+.load(f"{silver_base}/product")\
+.printSchema()
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+spark.read.format("delta")\
+.load(f"{silver_base}/productsubcategory")\
+.printSchema()
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }

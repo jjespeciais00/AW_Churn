@@ -1,0 +1,89 @@
+table date
+	lineageTag: 4bc59180-320a-4903-836b-733dc5e37993
+	sourceLineageTag: [dbo].[date]
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 74d1db96-5b83-43ba-b689-ccbc3180e8dd
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cf27618c-9c54-4bc4-9376-64f344894680
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: 2b3acbfd-9f15-4d76-ad2c-293da402bd68
+		sourceLineageTag: DayName
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: ec07ccb9-ad1c-4c83-9b13-93caadd87c74
+		sourceLineageTag: MonthName
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 094de925-f2d1-4914-9fca-1ad26d6add3d
+		sourceLineageTag: CalendarQuarter
+		summarizeBy: sum
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f073e5d7-cfd1-47f9-a815-a3863acc7a78
+		sourceLineageTag: CalendarYear
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 40e2189f-156d-4939-be9f-f6ad30970495
+		sourceLineageTag: FiscalQuarter
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 17939a05-def7-4fa5-bd88-d52c6707ba0c
+		sourceLineageTag: FiscalYear
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	partition date = entity
+		mode: directLake
+		source
+			entityName: date
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

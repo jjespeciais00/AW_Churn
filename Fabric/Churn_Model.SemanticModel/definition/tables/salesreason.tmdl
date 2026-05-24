@@ -1,0 +1,49 @@
+table salesreason
+	lineageTag: e58206d3-1c51-49e8-87c4-3e06c59ad508
+	sourceLineageTag: [dbo].[salesreason]
+
+	column SalesReasonKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b42232b-7dcb-49a8-a1bc-f91c81256744
+		sourceLineageTag: SalesReasonKey
+		summarizeBy: count
+		sourceColumn: SalesReasonKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesReasonCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 0541dade-51f5-4a9e-9bdb-eca08f0a64c6
+		sourceLineageTag: SalesReasonCode
+		summarizeBy: count
+		sourceColumn: SalesReasonCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesReasonName
+		dataType: string
+		lineageTag: c6f2c2de-b652-4fa0-b792-d333db85039c
+		sourceLineageTag: SalesReasonName
+		summarizeBy: none
+		sourceColumn: SalesReasonName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesReasonType
+		dataType: string
+		lineageTag: ebfae947-b486-4496-96b4-10e2cdbd75b4
+		sourceLineageTag: SalesReasonType
+		summarizeBy: none
+		sourceColumn: SalesReasonType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesreason = entity
+		mode: directLake
+		source
+			entityName: salesreason
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

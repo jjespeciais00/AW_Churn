@@ -1,0 +1,58 @@
+table salesterritory
+	lineageTag: bccfb3c5-c6c9-4d3d-9ad6-7dbfca33680d
+	sourceLineageTag: [dbo].[salesterritory]
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 939072d1-074e-44b9-8cf4-fef9e4d90549
+		sourceLineageTag: SalesTerritoryKey
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryCode
+		dataType: int64
+		formatString: 0
+		lineageTag: cec83f06-109c-401f-ad28-560e78bbda74
+		sourceLineageTag: SalesTerritoryCode
+		summarizeBy: count
+		sourceColumn: SalesTerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryRegion
+		dataType: string
+		lineageTag: a316178d-d611-4942-a25d-eef59d42d0b3
+		sourceLineageTag: SalesTerritoryRegion
+		summarizeBy: none
+		sourceColumn: SalesTerritoryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryCountry
+		dataType: string
+		lineageTag: c2680a21-f026-472c-a1f9-f94684fc638e
+		sourceLineageTag: SalesTerritoryCountry
+		summarizeBy: none
+		sourceColumn: SalesTerritoryCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryGroup
+		dataType: string
+		lineageTag: e725ce1d-20b6-4013-bddc-fb5ecbb435f1
+		sourceLineageTag: SalesTerritoryGroup
+		summarizeBy: none
+		sourceColumn: SalesTerritoryGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesterritory = entity
+		mode: directLake
+		source
+			entityName: salesterritory
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

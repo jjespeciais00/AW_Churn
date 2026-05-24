@@ -1,0 +1,40 @@
+table productcategory
+	lineageTag: 9de48229-cb32-4318-80bc-28fd789754b3
+	sourceLineageTag: [dbo].[productcategory]
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 74ef6326-fe54-41fc-9cb3-c091bfcea8da
+		sourceLineageTag: ProductCategoryKey
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 95cbb2e5-8f91-454a-acfc-d0619475497e
+		sourceLineageTag: ProductCategoryCode
+		summarizeBy: none
+		sourceColumn: ProductCategoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryName
+		dataType: string
+		lineageTag: 5a9e3078-4008-45c8-8669-e9bf993d667c
+		sourceLineageTag: ProductCategoryName
+		summarizeBy: none
+		sourceColumn: ProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition productcategory = entity
+		mode: directLake
+		source
+			entityName: productcategory
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

@@ -1,0 +1,83 @@
+table productinventory
+	lineageTag: 6f6f21c0-ba93-4082-94ae-26820c1e583d
+	sourceLineageTag: [dbo].[productinventory]
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 694f248f-5c13-4450-b4c9-0db4ee170c3e
+		sourceLineageTag: ProductKey
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2853421c-10dc-4a69-8020-b96e36045915
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MovementDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 330f8d65-fc5d-4928-a822-41b637b72607
+		sourceLineageTag: MovementDate
+		summarizeBy: none
+		sourceColumn: MovementDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 66ac206d-a1bc-43e2-955c-e6a40f2e9dbe
+		sourceLineageTag: UnitCost
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column UnitsIn
+		dataType: int64
+		formatString: 0
+		lineageTag: e97168fd-5e40-48bb-b5d5-10663e30368b
+		sourceLineageTag: UnitsIn
+		summarizeBy: sum
+		sourceColumn: UnitsIn
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsOut
+		dataType: int64
+		formatString: 0
+		lineageTag: d67d8649-0a67-4d0c-88e6-b8177f313d44
+		sourceLineageTag: UnitsOut
+		summarizeBy: sum
+		sourceColumn: UnitsOut
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsBalance
+		dataType: int64
+		formatString: 0
+		lineageTag: 94b86073-3670-49f7-b5c1-84005a63dc0d
+		sourceLineageTag: UnitsBalance
+		summarizeBy: sum
+		sourceColumn: UnitsBalance
+
+		annotation SummarizationSetBy = Automatic
+
+	partition productinventory = entity
+		mode: directLake
+		source
+			entityName: productinventory
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_Silver'
+

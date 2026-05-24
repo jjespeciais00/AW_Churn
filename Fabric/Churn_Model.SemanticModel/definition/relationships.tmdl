@@ -1,0 +1,36 @@
+relationship 2cc57527-3adb-dd35-1aca-f85503bece2d
+	fromColumn: internetsales.ProductKey
+	toColumn: product.ProductKey
+
+relationship df3ac199-bd88-2a00-86f3-c05d84313bd6
+	fromColumn: internetsales.OrderDateKey
+	toColumn: date.DateKey
+
+relationship 691377e4-2d5d-5a41-9e2c-d63e0a0aa601
+	fromColumn: internetsales.SalesTerritoryKey
+	toColumn: salesterritory.SalesTerritoryKey
+
+relationship f706e52f-da14-1476-7c61-84158e26fe2e
+	fromColumn: productinventory.ProductKey
+	toColumn: product.ProductKey
+
+relationship aa279a41-3616-a3e7-8d6f-78875b4025c9
+	fromColumn: productinventory.DateKey
+	toColumn: date.DateKey
+
+relationship b5ba179a-3137-7f0b-6259-9f3e63579777
+	fromColumn: geography.SalesTerritoryKey
+	toColumn: salesterritory.SalesTerritoryKey
+
+relationship 3211c772-14fd-80aa-8532-9e484f01665d
+	fromColumn: productsubcategory.ProductCategoryKey
+	toColumn: productcategory.ProductCategoryKey
+
+relationship 0f07591e-3fc0-fb44-a5a5-709e87da55a7
+	fromColumn: internetsales.CurrencyKey
+	toColumn: currency.CurrencyKey
+
+relationship f2d33701-ffa7-37a5-bc08-238261355b6d
+	fromColumn: product.ProductSubcategoryKey
+	toColumn: productsubcategory.ProductSubcategoryKey
+

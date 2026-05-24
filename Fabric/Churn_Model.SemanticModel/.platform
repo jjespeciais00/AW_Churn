@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Churn_Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6abacd66-2a3c-94f7-45c8-4ec58b38c249"
+  }
+}
