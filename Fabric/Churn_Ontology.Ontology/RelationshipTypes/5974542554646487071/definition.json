@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "5974542554646487071",
+  "name": "product_has_productsubcategory",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "232817029250160"
+  },
+  "target": {
+    "entityTypeId": "126020008092050"
+  }
+}

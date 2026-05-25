@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "43d321c3-0ce2-4dc8-840b-8322e0c636c4",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "CurrencyKey",
+        "targetPropertyId": "5974874911418964670"
+      },
+      {
+        "sourceColumnName": "CurrencyCode",
+        "targetPropertyId": "5974874890260471923"
+      },
+      {
+        "sourceColumnName": "CurrencyName",
+        "targetPropertyId": "5974874866338044601"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "currency",
+      "sourceSchema": "dbo"
+    }
+  }
+}

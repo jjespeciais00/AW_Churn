@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "5974645509726319675",
+  "name": "internetsales_has_date",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "210159242557457"
+  },
+  "target": {
+    "entityTypeId": "157020987028788"
+  }
+}

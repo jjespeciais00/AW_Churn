@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "937a630e-6179-47a5-9cfa-ecb207c58d2d",
+  "dataBindingTable": {
+    "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+    "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+    "sourceTableName": "product",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ProductKey",
+      "targetPropertyId": "5974877034062775555"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "ProductSubcategoryKey",
+      "targetPropertyId": "5974875026741862175"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "788c7e83-0bb1-4ed3-b9cd-73236b2b92b0",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "5974875416539913149"
+      },
+      {
+        "sourceColumnName": "Date",
+        "targetPropertyId": "5974875393430283425"
+      },
+      {
+        "sourceColumnName": "DayName",
+        "targetPropertyId": "5974875367409285391"
+      },
+      {
+        "sourceColumnName": "MonthName",
+        "targetPropertyId": "5974875346148043960"
+      },
+      {
+        "sourceColumnName": "CalendarQuarter",
+        "targetPropertyId": "5974875324629903321"
+      },
+      {
+        "sourceColumnName": "CalendarYear",
+        "targetPropertyId": "5974875301523196300"
+      },
+      {
+        "sourceColumnName": "FiscalQuarter",
+        "targetPropertyId": "5974875278015287571"
+      },
+      {
+        "sourceColumnName": "FiscalYear",
+        "targetPropertyId": "5974875256682091872"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "date",
+      "sourceSchema": "dbo"
+    }
+  }
+}

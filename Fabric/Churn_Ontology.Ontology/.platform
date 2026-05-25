@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Ontology",
+    "displayName": "Churn_Ontology"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "df31d6dc-74ce-b38c-4b3c-09f8408576fc"
+  }
+}

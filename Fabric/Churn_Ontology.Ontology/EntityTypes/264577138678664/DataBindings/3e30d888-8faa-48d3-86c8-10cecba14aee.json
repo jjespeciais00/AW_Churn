@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "3e30d888-8faa-48d3-86c8-10cecba14aee",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "5974877403751785794"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryCode",
+        "targetPropertyId": "5974877348310570918"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryRegion",
+        "targetPropertyId": "5974877316558263553"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryCountry",
+        "targetPropertyId": "5974877289589447109"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryGroup",
+        "targetPropertyId": "5974877269114255754"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "salesterritory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

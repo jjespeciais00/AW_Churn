@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "14902da6-fd33-43ec-8265-e47ba1af0006",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "GeographyKey",
+        "targetPropertyId": "5974875696237412941"
+      },
+      {
+        "sourceColumnName": "City",
+        "targetPropertyId": "5974875678223197582"
+      },
+      {
+        "sourceColumnName": "StateProvinceName",
+        "targetPropertyId": "5974875650538447255"
+      },
+      {
+        "sourceColumnName": "Country",
+        "targetPropertyId": "5974875629222727092"
+      },
+      {
+        "sourceColumnName": "PostalCode",
+        "targetPropertyId": "5974875604085855464"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "5974875582940221432"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "geography",
+      "sourceSchema": "dbo"
+    }
+  }
+}

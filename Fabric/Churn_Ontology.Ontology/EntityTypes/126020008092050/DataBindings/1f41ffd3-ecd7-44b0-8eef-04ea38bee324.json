@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "1f41ffd3-ecd7-44b0-8eef-04ea38bee324",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductSubcategoryKey",
+        "targetPropertyId": "5974875026741862175"
+      },
+      {
+        "sourceColumnName": "ProductSubcategoryCode",
+        "targetPropertyId": "5974875002931187692"
+      },
+      {
+        "sourceColumnName": "ProductSubcategoryName",
+        "targetPropertyId": "5974874980643602628"
+      },
+      {
+        "sourceColumnName": "ProductCategoryKey",
+        "targetPropertyId": "5974874958745907906"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "productsubcategory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

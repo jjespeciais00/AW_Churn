@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "59db651b-6a36-4686-bdc1-d34e9063e7e0",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductKey",
+        "targetPropertyId": "5974877034062775555"
+      },
+      {
+        "sourceColumnName": "ProductCode",
+        "targetPropertyId": "5974877007220109499"
+      },
+      {
+        "sourceColumnName": "ProductSubcategoryKey",
+        "targetPropertyId": "5974876985794195389"
+      },
+      {
+        "sourceColumnName": "ProductName",
+        "targetPropertyId": "5974876959604369576"
+      },
+      {
+        "sourceColumnName": "StandardCost",
+        "targetPropertyId": "5974876939049366764"
+      },
+      {
+        "sourceColumnName": "ListPrice",
+        "targetPropertyId": "5974876915325005530"
+      },
+      {
+        "sourceColumnName": "SafetyStockLevel",
+        "targetPropertyId": "5974876892026782375"
+      },
+      {
+        "sourceColumnName": "ReorderPoint",
+        "targetPropertyId": "5974876866343954185"
+      },
+      {
+        "sourceColumnName": "Size",
+        "targetPropertyId": "5974876846756514733"
+      },
+      {
+        "sourceColumnName": "Weight",
+        "targetPropertyId": "5974876818514599235"
+      },
+      {
+        "sourceColumnName": "ProductLine",
+        "targetPropertyId": "5974876798801714024"
+      },
+      {
+        "sourceColumnName": "Status",
+        "targetPropertyId": "5974876771922756683"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "product",
+      "sourceSchema": "dbo"
+    }
+  }
+}

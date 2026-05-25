@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d2fea987-2e47-49e7-a8d5-be432f20a2bb",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductKey",
+        "targetPropertyId": "5974875209744268812"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "5974875186260565713"
+      },
+      {
+        "sourceColumnName": "MovementDate",
+        "targetPropertyId": "5974875164022105154"
+      },
+      {
+        "sourceColumnName": "UnitCost",
+        "targetPropertyId": "5974875141332226281"
+      },
+      {
+        "sourceColumnName": "UnitsIn",
+        "targetPropertyId": "5974875119813885200"
+      },
+      {
+        "sourceColumnName": "UnitsOut",
+        "targetPropertyId": "5974875095597081281"
+      },
+      {
+        "sourceColumnName": "UnitsBalance",
+        "targetPropertyId": "5974875075644051728"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922",
+      "itemId": "e878495b-de05-4da2-a723-1d9f175d278f",
+      "sourceTableName": "productinventory",
+      "sourceSchema": "dbo"
+    }
+  }
+}
