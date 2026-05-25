@@ -2,6 +2,96 @@ table internetsales
 	lineageTag: c360dfe9-683c-4529-88d8-3e4edb3d57aa
 	sourceLineageTag: [dbo].[internetsales]
 
+	measure 'Total Revenue' =
+			
+			SUM(internetsales[SalesAmount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 386e8950-533f-40c2-a321-1c720c4204df
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Orders' =
+			
+			DISTINCTCOUNT(
+			internetsales[SalesOrderNumber]
+			)
+		formatString: 0
+		lineageTag: 4c27f2a3-1841-469d-aeff-8e36a8466c67
+
+		changedProperty = Name
+
+	measure 'Products Sold Quantity' =
+			
+			SUM(
+			internetsales[OrderQuantity]
+			)
+		formatString: 0
+		lineageTag: da4a284e-b830-414b-b520-e0074a4d41ef
+
+		changedProperty = Name
+
+	measure 'Total Cost' =
+			
+			SUM(
+			internetsales[TotalProductCost]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d95900bf-6114-40de-b6f4-c2acc255927c
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Gross Profit' =
+			
+			[Total Revenue]
+			-
+			[Total Cost]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a29e5492-7d55-42b2-9d20-d3df0f212698
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Profit Margin' =
+			
+			DIVIDE(
+			[Gross Profit],
+			[Total Revenue]
+			)
+		lineageTag: bd263f39-7676-4516-a67c-ce7b0ddce1b0
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Freight' =
+			
+			SUM(
+			internetsales[Freight]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ec224ddd-83be-48bf-af5f-ee8938477a75
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Tax' =
+			
+			SUM(
+			internetsales[TaxAmt]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: dc4ecf36-1a5e-4365-a6c2-8b2de4a88cb6
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
 	column ProductKey
 		dataType: int64
 		formatString: 0
