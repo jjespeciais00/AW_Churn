@@ -1,4 +1,198 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/graphqlApi/definition/1.0.0/schema.json",
-  "datasources": []
+  "datasources": [
+    {
+      "objects": [
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "CurrencyCode": "CurrencyCode",
+            "CurrencyKey": "CurrencyKey",
+            "CurrencyName": "CurrencyName"
+          },
+          "graphqlType": "currency",
+          "relationships": [],
+          "sourceObject": "dbo.currency",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "CalendarQuarter": "CalendarQuarter",
+            "CalendarYear": "CalendarYear",
+            "Date": "date",
+            "DateKey": "DateKey",
+            "DayName": "DayName",
+            "FiscalQuarter": "FiscalQuarter",
+            "FiscalYear": "FiscalYear",
+            "MonthName": "MonthName"
+          },
+          "graphqlType": "date",
+          "relationships": [],
+          "sourceObject": "dbo.date",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "CurrencyKey": "CurrencyKey",
+            "CustomerKey": "CustomerKey",
+            "DiscountAmount": "DiscountAmount",
+            "DueDate": "DueDate",
+            "DueDateKey": "DueDateKey",
+            "ExtendedAmount": "ExtendedAmount",
+            "Freight": "Freight",
+            "OrderDate": "OrderDate",
+            "OrderDateKey": "OrderDateKey",
+            "OrderQuantity": "OrderQuantity",
+            "ProductKey": "ProductKey",
+            "ProductStandardCost": "ProductStandardCost",
+            "PromotionKey": "PromotionKey",
+            "RevisionNumber": "RevisionNumber",
+            "SalesAmount": "SalesAmount",
+            "SalesOrderLineNumber": "SalesOrderLineNumber",
+            "SalesOrderNumber": "SalesOrderNumber",
+            "SalesTerritoryKey": "SalesTerritoryKey",
+            "ShipDate": "ShipDate",
+            "ShipDateKey": "ShipDateKey",
+            "TaxAmt": "TaxAmt",
+            "TotalProductCost": "TotalProductCost",
+            "UnitPrice": "UnitPrice",
+            "UnitPriceDiscountPct": "UnitPriceDiscountPct"
+          },
+          "graphqlType": "internetsales",
+          "relationships": [],
+          "sourceObject": "dbo.internetsales",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "ListPrice": "ListPrice",
+            "ProductCode": "ProductCode",
+            "ProductKey": "ProductKey",
+            "ProductLine": "ProductLine",
+            "ProductName": "ProductName",
+            "ProductSubcategoryKey": "ProductSubcategoryKey",
+            "ReorderPoint": "ReorderPoint",
+            "SafetyStockLevel": "SafetyStockLevel",
+            "Size": "Size",
+            "StandardCost": "StandardCost",
+            "Status": "Status",
+            "Weight": "Weight"
+          },
+          "graphqlType": "product",
+          "relationships": [],
+          "sourceObject": "dbo.product",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "ProductCategoryCode": "ProductCategoryCode",
+            "ProductCategoryKey": "ProductCategoryKey",
+            "ProductCategoryName": "ProductCategoryName"
+          },
+          "graphqlType": "productcategory",
+          "relationships": [],
+          "sourceObject": "dbo.productcategory",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "DateKey": "DateKey",
+            "MovementDate": "MovementDate",
+            "ProductKey": "ProductKey",
+            "UnitCost": "UnitCost",
+            "UnitsBalance": "UnitsBalance",
+            "UnitsIn": "UnitsIn",
+            "UnitsOut": "UnitsOut"
+          },
+          "graphqlType": "productinventory",
+          "relationships": [],
+          "sourceObject": "dbo.productinventory",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "ProductCategoryKey": "ProductCategoryKey",
+            "ProductSubcategoryCode": "ProductSubcategoryCode",
+            "ProductSubcategoryKey": "ProductSubcategoryKey",
+            "ProductSubcategoryName": "ProductSubcategoryName"
+          },
+          "graphqlType": "productsubcategory",
+          "relationships": [],
+          "sourceObject": "dbo.productsubcategory",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "SalesTerritoryCode": "SalesTerritoryCode",
+            "SalesTerritoryCountry": "SalesTerritoryCountry",
+            "SalesTerritoryGroup": "SalesTerritoryGroup",
+            "SalesTerritoryKey": "SalesTerritoryKey",
+            "SalesTerritoryRegion": "SalesTerritoryRegion"
+          },
+          "graphqlType": "salesterritory",
+          "relationships": [],
+          "sourceObject": "dbo.salesterritory",
+          "sourceObjectType": "Table"
+        }
+      ],
+      "sourceItemId": "29a0c502-447e-4db2-b6e4-b82b526f0ca1",
+      "sourceType": "SqlAnalyticsEndpoint",
+      "sourceWorkspaceId": "86cfb1d8-84ae-4e97-83d6-6de876acf922"
+    }
+  ]
 }

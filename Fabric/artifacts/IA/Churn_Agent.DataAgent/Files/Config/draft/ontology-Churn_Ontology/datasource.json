@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "df31d6dc-74ce-b38c-4b3c-09f8408576fc",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "Churn_Ontology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "salesterritory",
+      "is_selected": true,
+      "display_name": "salesterritory",
+      "type": "ontology.entity",
+      "description": "SalesTerritoryKey,SalesTerritoryCode,SalesTerritoryRegion,SalesTerritoryCountry,SalesTerritoryGroup",
+      "children": []
+    },
+    {
+      "id": "product",
+      "is_selected": true,
+      "display_name": "product",
+      "type": "ontology.entity",
+      "description": "ProductKey,ProductCode,ProductSubcategoryKey,ProductName,StandardCost,ListPrice,SafetyStockLevel,ReorderPoint,Size,Weight,ProductLine,Status",
+      "children": []
+    },
+    {
+      "id": "internetsales",
+      "is_selected": true,
+      "display_name": "internetsales",
+      "type": "ontology.entity",
+      "description": "ProductKey,OrderDateKey,DueDateKey,ShipDateKey,CustomerKey,PromotionKey,CurrencyKey,SalesTerritoryKey,SalesOrderNumber,SalesOrderLineNumber,RevisionNumber,OrderQuantity,UnitPrice,ExtendedAmount,UnitPriceDiscountPct,DiscountAmount,ProductStandardCost,TotalProductCost,SalesAmount,TaxAmt,Freight,OrderDate,DueDate,ShipDate",
+      "children": []
+    },
+    {
+      "id": "geography",
+      "is_selected": true,
+      "display_name": "geography",
+      "type": "ontology.entity",
+      "description": "GeographyKey,City,StateProvinceName,Country,PostalCode,SalesTerritoryKey",
+      "children": []
+    },
+    {
+      "id": "salesreason",
+      "is_selected": true,
+      "display_name": "salesreason",
+      "type": "ontology.entity",
+      "description": "SalesReasonKey,SalesReasonCode,SalesReasonName,SalesReasonType",
+      "children": []
+    },
+    {
+      "id": "date",
+      "is_selected": true,
+      "display_name": "date",
+      "type": "ontology.entity",
+      "description": "DateKey,Date,DayName,MonthName,CalendarQuarter,CalendarYear,FiscalQuarter,FiscalYear",
+      "children": []
+    },
+    {
+      "id": "productinventory",
+      "is_selected": true,
+      "display_name": "productinventory",
+      "type": "ontology.entity",
+      "description": "ProductKey,DateKey,MovementDate,UnitCost,UnitsIn,UnitsOut,UnitsBalance",
+      "children": []
+    },
+    {
+      "id": "productsubcategory",
+      "is_selected": true,
+      "display_name": "productsubcategory",
+      "type": "ontology.entity",
+      "description": "ProductSubcategoryKey,ProductSubcategoryCode,ProductSubcategoryName,ProductCategoryKey",
+      "children": []
+    },
+    {
+      "id": "currency",
+      "is_selected": true,
+      "display_name": "currency",
+      "type": "ontology.entity",
+      "description": "CurrencyKey,CurrencyCode,CurrencyName",
+      "children": []
+    },
+    {
+      "id": "productcategory",
+      "is_selected": true,
+      "display_name": "productcategory",
+      "type": "ontology.entity",
+      "description": "ProductCategoryKey,ProductCategoryCode,ProductCategoryName",
+      "children": []
+    }
+  ]
+}
